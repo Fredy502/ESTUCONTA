@@ -132,3 +132,61 @@ footer {
 }
 
 .socials a:hover { color: var(--vibrant-orange); }
+
+#contacto-formulario {
+    padding: 5rem 5%;
+    background: white;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form-estuconta {
+    text-align: left;
+    margin-top: 2rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary); /* El azul de tu logo */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
