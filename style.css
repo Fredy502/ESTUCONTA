@@ -795,3 +795,46 @@ section {
     letter-spacing: 1px;
     opacity: 0.9;
 }
+
+/* --- RESPONSIVIDAD PARA EL ENCABEZADO --- */
+
+/* Ocultar el icono de menú en computadoras */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Aparece en móviles */
+    }
+
+    .nav-links {
+        display: none; /* Se oculta por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #0a1e3d;
+        padding: 20px 0;
+        text-align: center;
+        gap: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Clase que activaremos con JavaScript */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo-text .brand {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text .slogan {
+        font-size: 0.7rem;
+    }
+}

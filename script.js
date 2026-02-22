@@ -233,3 +233,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     observer.observe(document.querySelector('.stats-container'));
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Abrir/Cerrar menú al dar clic en la hamburguesa
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    // Cerrar el menú automáticamente al hacer clic en un enlace (para navegar)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
