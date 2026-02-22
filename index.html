@@ -3,107 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estuconta | Exactitud en cada número</title>
+    <title>Estuconta - Exactitud en cada número</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Ajuste rápido para que el logo no se vea gigante */
-        .logo img {
-            height: 60px; /* Puedes ajustar este tamaño a tu gusto */
-            width: auto;
-            display: block;
-        }
-        nav {
-            padding: 0.5rem 5% !important; /* Reduce espacio para que luzca mejor el logo */
-        }
-    </style>
 </head>
 <body>
-    <nav id="navbar">
-        <div class="logo">
-            <img src="logo.jpg" alt="Estuconta Logo">
-        </div>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
 
-    <header id="inicio" class="hero">
+    <header class="main-header">
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Estuconta" class="logo-img">
+            <div class="logo-text">
+                <span class="brand">ESTUCONTA</span>
+                <span class="slogan">Exactitud en cada número</span>
+            </div>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#servicios">SERVICIOS</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#contacto" class="btn-contacto-nav">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Expertos en Contabilidad y SAT</h1>
-            <p>Exactitud en cada número para tu tranquilidad financiera.</p>
-            <a href="#contacto" class="btn">Solicitar Asesoría</a>
-        </div>
-    </header>
-
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-calculator"></i>
-                <h3>Gestión de Impuestos</h3>
-                <p>Declaraciones de IVA, ISR y trámites ante la SAT en Guatemala.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <h3>Contabilidad General</h3>
-                <p>Balances, estados financieros y libros contables al día.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-briefcase"></i>
-                <h3>Asesoría Independiente</h3>
-                <p>Soluciones contables personalizadas para empresas y emprendedores.</p>
+            <h1>Soluciones Contables para tu Negocio</h1>
+            <p>Especialistas en Pequeño Contribuyente, PYMES y gestiones ante la SAT. Facilitamos tus trámites de traspasos, inscripción de empresas y cumplimiento tributario con profesionalismo.</p>
+            <div class="hero-btns">
+                <a href="#contacto" class="btn-primary">Consulta Gratis</a>
+                <a href="#blog" class="btn-secondary">Saber Más</a>
             </div>
         </div>
     </section>
-<section id="contacto-formulario">
-        <div class="container">
-            <h2>Solicita tu Asesoría</h2>
-            <p>Déjanos tus datos y nos pondremos en contacto contigo a la brevedad.</p>
-            
-            <form action="https://formspree.io/f/mreakegg" method="POST" id="form-estuconta">
-                <div class="input-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
-                </div>
 
-                <div class="input-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-                </div>
+    <section id="servicios" class="services-section">
+    <div class="container">
+        <h2 class="section-title">NUESTROS SERVICIOS</h2>
+        <p class="section-subtitle">Lo que ofrecemos - Exactitud en cada trámite</p>
 
-                <div class="input-group">
-                    <label for="servicio">Servicio de Interés</label>
-                    <select id="servicio" name="servicio">
-                        <option value="impuestos">Gestión de Impuestos (IVA/ISR)</option>
-                        <option value="contabilidad">Contabilidad General</option>
-                        <option value="sat">Trámites SAT</option>
-                        <option value="otro">Asesoría Independiente</option>
-                    </select>
+        <div class="services-grid">
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-file-invoice"></i> Autorización de documentos tributarios</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Agencia Virtual activa, NIT sin omisos y RTU actualizado al año vigente.</p>
                 </div>
+            </div>
 
-                <div class="input-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesitas..." required></textarea>
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-book"></i> Habilitación de libros contables LED</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Agencia Virtual, pago de Q0.50 por hoja en el banco y NIT activo.</p>
                 </div>
+            </div>
 
-                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-user-edit"></i> Inscripción y actualización de datos</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> DPI vigente, factura de servicios (luz/agua) reciente y correo electrónico.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-id-card"></i> Solicitud de NIT</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> DPI original, copia de DPI y recibo de luz de donde reside el contribuyente.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-laptop"></i> Solicitud de Agencia Virtual</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> NIT personal, acceso a correo electrónico y DPI físico para validación.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-list-alt"></i> Planilla del IVA</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Recopilación de facturas FEL de compras del periodo correspondiente.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-address-card"></i> Trámites de tarjetas de circulación</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Estar solvente de multas e impuesto de circulación, DPI del propietario.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-sticky-note"></i> Impresión de calcomanías</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Pago del ISCV del año actual y número de placa/NIT.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-file-alt"></i> Presentación de formularios ante la SAT</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Información contable del periodo y acceso a Declaraguate.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-chart-line"></i> Declaración mensual Pequeño Contribuyente</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Reporte de ventas mensuales y acceso a Agencia Virtual.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-calculator"></i> Contabilidad de Pequeño Contribuyente</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Registro de facturas emitidas y recibidas en el libro de compras/ventas.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-exchange-alt"></i> Traspasos electrónicos de vehículos</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Título original, Tarjeta de Circulación, DPI de vendedor y comprador.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-car-side"></i> Primeras placas</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Póliza de importación, factura de compra y DPI del dueño.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-gavel"></i> Antecedentes penales y policiacos</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> DPI original y pago de las boletas correspondientes en el banco.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-baby"></i> Certificado de nacimiento</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Nombre completo, fecha de nacimiento o número de CUI.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-coins"></i> Contabilidad Régimen sobre ingresos</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Facturación mensual, registros de compras y retenciones de ISR.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-certificate"></i> Carta Certificaciones de Ingresos</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Estados de cuenta de 3 meses y facturas que respalden el ingreso.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-store-slash"></i> Cese de actividades</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Estar al día con declaraciones y no tener omisos en SAT.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-user-plus"></i> Inscripción a régimen pequeño contribuyente</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> DPI y definir la actividad económica a realizar.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-check-double"></i> Emisión de solvencia fiscal</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> No tener deudas pendientes con la SAT ni declaraciones atrasadas.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-sync-alt"></i> Actualización de RTU</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Agencia Virtual activa y validación de datos de contacto.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-envelope-open-text"></i> Cambio de correo agencia virtual sat</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> DPI vigente y acceso al nuevo correo electrónico.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <button class="accordion"><i class="fas fa-users"></i> Inscripción al IGSS</button>
+                <div class="panel">
+                    <p><strong>Requisitos:</strong> Constancia de inscripción de SAT, DPI y datos del centro de trabajo.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="testimonials">
+        <h2 class="section-title">TESTIMONIOS</h2>
+        <p class="section-subtitle">Lo que dicen nuestros clientes</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="opinion.png" alt="Ana Martinez">
+                <p>"Excelente servicio, muy profesionales. ¡Altamente recomendados para pequeñas empresas!"</p>
+                <h4>Ana Martínez</h4>
+                <span>Emprendedora</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="opinion.png" alt="Carlos Gomez">
+                <p>"Gracias a su equipo, nuestras finanzas están en orden y bajo control. Traspaso rápido."</p>
+                <h4>Carlos Gómez</h4>
+                <span>Persona Individual</span>
+            </div>
+        </div>
+    </section>
+
+<section id="blog" class="info-center">
+    <div class="container">
+        <h2 class="main-title">Centro de Información SAT</h2>
+        <p class="main-subtitle">Guías rápidas y requisitos para tus trámites en Guatemala</p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="card-header"><i class="fas fa-car"></i> <h3>Gestión de Vehículos</h3></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Traspasos FEL:</strong> Título, Tarjeta, DPI de ambos y solvencia de multas.</li>
+                        <li><strong>Primeras Placas:</strong> Póliza de importación y pago de distintivos.</li>
+                        <li><strong>Calcomanía:</strong> Pago del ISCV y NIT del propietario.</li>
+                    </ul>
+                    <div class="card-tip">Dato Clave: Tienes 30 días hábiles para el traspaso tras la compra.</div>
+                </div>
+            </div>
+
+            <div class="info-card highlight">
+                <div class="card-header"><i class="fas fa-calculator"></i> <h3>Pequeño Contribuyente</h3></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Impuesto:</strong> 5% sobre ventas mensuales.</li>
+                        <li><strong>FEL:</strong> Obligatorio emitir facturas electrónicas.</li>
+                        <li><strong>Libros:</strong> Registro LED obligatorio de compras y ventas.</li>
+                    </ul>
+                    <div class="card-tip">Tip: Declarar antes del último día del mes siguiente.</div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header"><i class="fas fa-laptop-house"></i> <h3>Agencia Virtual</h3></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Activación:</strong> Requiere NIT y validación biométrica.</li>
+                        <li><strong>RTU:</strong> Actualización anual obligatoria de datos.</li>
+                        <li><strong>Cese de Actividades:</strong> Cierre de negocios sin omisos.</li>
+                    </ul>
+                    <div class="card-tip">Recuerda: Tu contraseña de SAT es estrictamente personal.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="nosotros" class="why-us-modern">
+    <div class="container">
+        <div class="why-content">
+            <div class="why-text">
+                <h2>¿POR QUÉ ELEGIRNOS?</h2>
+                <p class="tagline">Profesionalismo y Confianza en cada trámite</p>
+                
+                <div class="feature-list">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-award"></i></div>
+                        <div class="feature-info">
+                            <h4>Experiencia Comprobada</h4>
+                            <p>Hemos asesorado a contribuyentes guatemaltecos y PYMES con éxito total ante la SAT.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="feature-info">
+                            <h4>Atención Personalizada</h4>
+                            <p>No eres un número de NIT; eres un socio. Trato humano y asesoría técnica directa.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="feature-info">
+                            <h4>Tecnología Avanzada</h4>
+                            <p>Procesos digitales optimizados para reducir errores y agilizar tus traspasos y libros.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="why-image">
+                <div class="image-overlay">
+                    <p>+50 Trámites Exitosos en 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="stats-container">
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="+50">0</h3>
+        <p>Trámites Exitosos</p>
+    </div>
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="50">0</h3>
+        <p>% Clientes Satisfechos</p>
+    </div>
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="+4">0</h3>
+        <p>Años de Experiencia</p>
+    </div>
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="23">0</h3>
+        <p>Servicios Especializados</p>
+    </div>
+</div>
+
+    <footer id="contacto" class="main-footer">
+    <div class="footer-container">
+        <div class="footer-form-section">
+            <h3 class="footer-title">ENVÍANOS UNA CONSULTA</h3>
+            <form action="https://formspree.io/f/mreakegg" method="POST" class="estuconta-form">
+                <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                
+                <select name="tipo_contribuyente" required>
+                    <option value="" disabled selected>Tipo de Contribuyente</option>
+                    <option value="pequeno">Pequeño Contribuyente</option>
+                    <option value="simplificado">Régimen Simplificado sobre Ingresos</option>
+                    <option value="utilidades">Régimen sobre Utilidades</option>
+                    <option value="individual">Persona Individual</option>
+                </select>
+                
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <textarea name="mensaje" placeholder="Escribe tu consulta aquí..." rows="4" required></textarea>
+                
+                <button type="submit" class="btn-submit-footer">ENVIAR MENSAJE</button>
             </form>
         </div>
-    </section>
 
-    <footer id="contacto">
-        <h2>Contáctanos</h2>
-        <p>¿Listo para llevar tu contabilidad al siguiente nivel?</p>
-        <div class="socials">
-            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="footer-info-section">
+            <h3 class="footer-title">CONTÁCTANOS <span>¡Hablemos Hoy!</span></h3>
+            
+            <div class="contact-methods">
+               <a href="https://wa.me/50255826042?text=Hola%20Estuconta,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios%20contables." class="option-item" target="_blank">
+    <span class="option-label">WhatsApp</span>
+    <div class="option-icon ws-color"><i class="fab fa-whatsapp"></i></div>
+</a>	
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> estucontagt@gmail.com
+                </div>
+                
+                <a href="https://www.facebook.com/share/1CQDGixh5n/" target="_blank" class="contact-link">
+                    <i class="fab fa-facebook"></i> Estuconta Oficial
+                </a>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    <span>14°33'52.7"N 90°34'11.4"W<br>Villa Nueva, Guatemala</span>
+                </div>
+            </div>
+
+            <div class="footer-map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Atención en toda el área de Villa Nueva y alrededores.</p>
+            </div>
         </div>
-        <p class="copy">&copy; 2026 Estuconta - Guatemala</p>
-    </footer>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Estuconta - Exactitud en cada número. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
     <script src="script.js"></script>
+
+<div class="estuconta-float-wrapper">
+    
+    <div class="float-options" id="floatOptions">
+        <div class="option-item" onclick="toggleQRCard()">
+            <span class="option-label">Ver Código QR</span>
+            <div class="option-icon qr-color"><i class="fas fa-qrcode"></i></div>
+        </div>
+        
+        <a href="https://wa.me/50255826042?text=Hola%20Estuconta,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios%20contables." class="option-item" target="_blank">
+    <span class="option-label">WhatsApp</span>
+    <div class="option-icon ws-color"><i class="fab fa-whatsapp"></i></div>
+</a>
+    </div>
+
+    <div class="main-float-btn" id="mainBtn">
+        <i class="fas fa-plus" id="mainIcon"></i>
+    </div>
+
+    <div class="qr-float-card" id="qrFloatCard">
+        <div class="qr-card-header">
+            <h3>ESTUCONTA</h3>
+            <span class="close-card" onclick="toggleQRCard()">&times;</span>
+        </div>
+        <p class="qr-tagline">Exactitud en cada número</p>
+        <div class="qr-img-container">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/50255826042" alt="QR Estuconta">
+        </div>
+        <p class="qr-footer">Perito Contador</p>
+    </div>
+</div>
 </body>
 </html>
