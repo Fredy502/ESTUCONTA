@@ -252,16 +252,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const menu-toggle = document.getElementById('mobile-menu');
+    const nav-links = document.querySelector('nav-links');
 
     // Al hacer clic en el icono de barras
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
+    menu-toggle.addEventListener('click', function() {
+        nav-links.classList.toggle('active');
         
         // Opcional: Cambiar el icono de "barras" a una "X" al abrir
-        const icon = menuToggle.querySelector('i');
-        if (navLinks.classList.contains('active')) {
+        const icon = menu-toggle.querySelector('i');
+        if (nav-links.classList.contains('active')) {
             icon.classList.replace('fa-bars', 'fa-times');
         } else {
             icon.classList.replace('fa-times', 'fa-bars');
@@ -269,10 +269,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Cerrar el menú automáticamente al hacer clic en cualquier opción
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            nav-links.classList.remove('active');
+            menu-toggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
         });
     });
 });
