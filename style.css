@@ -838,3 +838,74 @@ section {
         font-size: 0.7rem;
     }
 }
+
+/* --- AJUSTES BASE --- */
+.main-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #0a1e3d;
+}
+
+.menu-toggle {
+    display: none; /* Oculto en computadoras */
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* --- AJUSTES PARA MÓVIL (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Aparece en teléfonos */
+    }
+
+    /* Ocultamos la lista de navegación original */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: fixed;
+        top: 70px; /* Debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: #0a1e3d;
+        padding: 20px 0;
+        text-align: center;
+        gap: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Clase que activará el JavaScript para mostrar el menú */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Reducir tamaño de logo en móvil para que quepa todo */
+    .logo-img {
+        width: 35px;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .slogan {
+        font-size: 0.6rem;
+    }
+
+    /* Ajuste de la sección Hero (el texto principal) */
+    .hero h1 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+}
